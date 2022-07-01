@@ -15,16 +15,16 @@ export default function App() {
   console.log(user)
   return (
     <main className="App">
-      {user ? 
+      {user ?
         <>
-          <NavBar user={user} setUser={setUser}/>
+          <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path='/orders/new' element={<GameStorePage/>} />
-            <Route path='/orders' element={<OrderHistoryPage/>} />
+            <Route path='/orders/new' element={<GameStorePage />} />
+            <Route path='/orders' element={<OrderHistoryPage />} />
           </Routes>
         </>
         :
-        <AuthPage setUser={setUser}/>
+        <AuthPage setUser={setUser} />
       }
     </main>
   );
