@@ -6,12 +6,21 @@ import NavBar from '../../components/NavBar';
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
+require('dotenv').config()
+const fetch = require('node-fetch');
 
 
+const url = `https://api.rawg.io/api/games?key=${process.env.APIKEY}`
 
+
+fetch(url/*, options*/)
+	.then(res => res.json())
+	.then(json => console.log(json))
+	.catch(err => console.error('error:' + err));
 
 export default function App() {
   const [user, setUser] = useState(getUser())
+
   console.log(user)
   return (
     <main className="App">
