@@ -23,21 +23,21 @@ export default function App() {
     gameResults = await fetch(`https://api.rawg.io/api/games?search=${searchText}&key=${APIKEY}`, {
       method: 'GET'
     })
-    .then((res) => {
-      return res
-        .json()
-        .then((resJson) => {
-          console.log(resJson.results);
-          return resJson.results;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  setGamesArr(gameResults);
+      .then((res) => {
+        return res
+          .json()
+          .then((resJson) => {
+            console.log(resJson.results);
+            return resJson.results;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    setGamesArr(gameResults);
   }
 
   return (

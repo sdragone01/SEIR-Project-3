@@ -6,11 +6,14 @@ import React, { Component } from 'react';
 class LogInButt extends Component {
     state = { showForm: false }
 
+
     showLogInForm = () => {
         return (
+            <>
+                <LoginForm />
+                <button onClick={() => this.setState({ showForm: false })}> Close</button>
 
-            <LoginForm />
-
+            </>
         );
     }
 

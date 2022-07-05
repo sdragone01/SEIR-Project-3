@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  display: flex;
   background: url(../../../Assets/background\ thing\ app\ copy.png);
   background-size: cover;
+  height: 100vh;
 }

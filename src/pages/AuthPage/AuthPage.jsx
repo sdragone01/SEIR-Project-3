@@ -6,6 +6,7 @@ import Tag from './titlebar.svg'
 
 
 
+
 export default function AuthPage({ setUser }) {
     return (
         <main className="landingpage">
