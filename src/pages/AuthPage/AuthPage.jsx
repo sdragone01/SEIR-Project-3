@@ -6,11 +6,11 @@ import LogInButt from './LogInPage'
 
 export default function AuthPage({ setUser }) {
     return (
-        <main>
-
-            <SignUpButt setUser={setUser} />
-            <LogInButt setUser={setUser} />
-
+        <main id="landingpage">
+            <div id="buttons" >
+                <SignUpButt setUser={setUser} />
+                <LogInButt setUser={setUser} />
+            </div>
         </main>
     )
 }
