@@ -1,0 +1,19 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    z-index: 4;
+    margin-left: 50%;
+    margin-top: -50%;
+    background-color: black;
+
+}
+
+form {
+    width: auto;
+
+    padding: 0%;
+
+
+}
