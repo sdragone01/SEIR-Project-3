@@ -2,6 +2,7 @@ import './AuthPage.css'
 import LoginForm from "../../components/LogInForm"
 import React, { Component } from 'react';
 
+
 class LogInButt extends Component {
     state = { showForm: false }
 
@@ -17,8 +18,8 @@ class LogInButt extends Component {
 
     render() {
         return (
-            <div className='logIn'>
-                <button onClick={() => this.setState({ showForm: true })}>Login</button>
+            <div >
+                <button className='logIn' onClick={() => this.setState({ showForm: true })}>Login</button>
                 {this.state.showForm ? this.showLogInForm() : null}
             </div>
         );
