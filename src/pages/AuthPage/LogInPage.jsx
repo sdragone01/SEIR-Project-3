@@ -1,14 +1,28 @@
+import './AuthPage.css'
+import LoginForm from "../../components/LogInForm"
+import React, { Component } from 'react';
 
+class LogInButt extends Component {
+    state = { showForm: false }
 
+    showLogInForm = () => {
+        return (
+            <div>
 
-export default function LogInPage({ setUser }) {
-    return (
-        <main>
-            <h1></h1>
+                <LoginForm />
 
+            </div>
+        );
+    }
 
+    render() {
+        return (
+            <div className='logIn'>
+                <button onClick={() => this.setState({ showForm: true })}>Login</button>
+                {this.state.showForm ? this.showLogInForm() : null}
+            </div>
+        );
+    }
 
-        </main>
-    )
 }
-
+export default LogInButt

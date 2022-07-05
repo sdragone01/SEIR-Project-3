@@ -1,15 +1,16 @@
+import './AuthPage.css'
+import SignUpButt from './SignUpPage'
+import LogInButt from './LogInPage'
 
-import SignUpForm from "../../components/SignUpForm"
-import LoginForm from "../../components/LogInForm"
+
 
 export default function AuthPage({ setUser }) {
     return (
         <main>
 
-            <LoginForm setUser={setUser} />
-            <SignUpForm setUser={setUser} />
+            <SignUpButt setUser={setUser} />
+            <LogInButt setUser={setUser} />
 
         </main>
     )
 }
-
