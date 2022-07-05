@@ -15,8 +15,8 @@ class SignUpButt extends Component {
 
     render() {
         return (
-            <div className='signUp'>
-                <button onClick={() => this.setState({ showForm: true })}>Signup</button>
+            <div >
+                <button className='signUp' onClick={() => this.setState({ showForm: true })}>Signup</button>
                 {this.state.showForm ? this.showSignupForm() : null}
             </div>
         );
