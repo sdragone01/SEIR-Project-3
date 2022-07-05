@@ -8,11 +8,9 @@ class LogInButt extends Component {
 
     showLogInForm = () => {
         return (
-            <div>
 
-                <LoginForm />
+            <LoginForm />
 
-            </div>
         );
     }
 
