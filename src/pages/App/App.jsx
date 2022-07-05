@@ -12,7 +12,7 @@ import GameList from "../../components/GameList";
 const fetch = require("node-fetch");
 const APIKEY = "3498f188321247eb96dee04d1c8e0928";
 // const url = `https://api.rawg.io/api/games?search=${searchText}&key=${APIKEY}`
-
+// change
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [gamesArr, setGamesArr] = useState([]);
