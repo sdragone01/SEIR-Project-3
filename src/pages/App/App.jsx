@@ -11,6 +11,7 @@ import UserPage from "../UserPage";
 import GameIndexPage from "../GameIndex/GameIndex";
 import GameDetails from "../GameDetails/GameDetails"
 import { games } from "../../seed"
+import AddGameForm from "../../components/AddGameForm";
 
 
 const APIKEY = '3498f188321247eb96dee04d1c8e0928'
@@ -52,7 +53,7 @@ export default function App() {
     <main className="App">
       {user ?
         <>
-          <NavBar className='searchbar' user={user} setUser={setUser} findGame={findGame}/>
+          <NavBar className='searchbar' user={user} setUser={setUser} findGame={findGame} />
           <Routes>
             <Route path="/" />
             <Route
@@ -62,6 +63,7 @@ export default function App() {
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
             <Route path='/games' element={<GameIndexPage />} />
+            <Route path='/new' element={<AddGameForm />} />
           </Routes>
           <GameList gamesArr={gamesArr} />
         </>
