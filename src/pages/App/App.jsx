@@ -6,7 +6,6 @@ import NavBar from "../../components/NavBar";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
-import SearchBar from "../../components/SearchBar";
 import GameList from "../../components/GameList";
 import UserPage from "../UserPage";
 import GameIndexPage from "../GameIndex/GameIndex";
