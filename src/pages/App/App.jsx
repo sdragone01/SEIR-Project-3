@@ -11,6 +11,7 @@ import GameList from "../../components/GameList";
 import UserPage from "../UserPage";
 import GameIndexPage from "../GameIndex/GameIndex";
 
+
 const APIKEY = '3498f188321247eb96dee04d1c8e0928'
 const url = `https://api.rawg.io/api/games?&key=${APIKEY}`
 
@@ -20,27 +21,7 @@ export default function App() {
   let gameResults = []
 
 
-  useEffect(() => {
-    fetch(url)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(
-            `This is an HTTP error: The status is ${res.status}`
-          )
-        }
-        return res.json()
-      })
-      .then((actualData) => {
-        setIndex(actualData); setError(null)
-      })
-      .catch((err) => {
-        setError(err.message)
-        setIndex(null)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-  }, [])
+
 
 
   const findGame = async (searchText) => {
@@ -76,7 +57,7 @@ export default function App() {
             <Route path="/user" element={<UserPage />} />
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
-            <Route path= '/games' element={<GameIndexPage/>} />
+            <Route path='/games' element={<GameIndexPage />} />
           </Routes>
           <GameList gamesArr={gamesArr} />
         </>
