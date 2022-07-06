@@ -1,16 +1,39 @@
 .NavBar {
+    color: white;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: auto;
-    padding: 20px;
-    margin: 10px;
+    justify-content: space-between;
+    justify-content: right;
+    align-content: center;
+    margin-top: 1%;
+
+
+
+
+
 }
+
+.bar {
+    width: 99%;
+    background-color: rgba(88, 88, 88, 0.583);
+    height: 10%;
+    position: absolute;
+}
+
 .App {
     display: flex;
     margin-right: auto;
 }
+
 .NavLink {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-size: xx-large;
+    color: white;
+    text-decoration: none;
     display: flex;
-    gap: 50px
+    position: relative;
+    margin-right: 5%;
+    justify-content: space-between;
+
 }

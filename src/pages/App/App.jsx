@@ -54,6 +54,7 @@ export default function App() {
           <SearchBar findGame={findGame} />
           <NavBar className='searchbar' user={user} setUser={setUser} />
           <Routes>
+            <Route path="/" />
             <Route path="/user" element={<UserPage />} />
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
