@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './SearchBar.css'
 
 export default function SearchBar({ findGame }) {
   const [searchText, setSearchText] = useState("");
@@ -17,7 +18,7 @@ export default function SearchBar({ findGame }) {
     findGame(searchText);
   }
   return (
-    <div>
+    <div className='SearchBox'>
       <form onSubmit={handleSubmit}>
         <input onChange={handleChange} value={searchText} name="searchBar" />
         <button type="submit">Search</button>
