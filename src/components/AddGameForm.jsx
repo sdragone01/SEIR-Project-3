@@ -17,7 +17,7 @@ export default function AddGameForm(){
     }
     return(
     <>
-        <form onSubmit={}>
+        <form classnName="form" onSubmit={}>
             <input type="text" onChange={(e) => setField('title', e.target.value)} value={form.title} name='title'/>
             <input type="text" onChange={}value={genre} name='genre'/>
             <input type="text" onChange={} value={description} name='description'/>
