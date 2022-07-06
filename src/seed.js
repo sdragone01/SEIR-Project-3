@@ -11,7 +11,7 @@ export const games = [
         title: "Life in the Fast Lane",
         genre: "genre",
         description: "game by Chris",
-        link: "link here",
+        link: "https://chapachris16.github.io/Life-In-The-Fast-Lane/",
         img: "Image Here"
 
     },

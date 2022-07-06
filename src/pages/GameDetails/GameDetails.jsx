@@ -8,10 +8,7 @@ export default function GameDetailPage({ games }) {
             <div className="textInfo">
                 <h1>{game.title}</h1>
                 <h3>Genre: {game.genre}</h3>
-
-
-
-
+                <iframe src={game.link} frameBorder='0' allowfullscreen ></iframe>
             </div>
 
         </div>
