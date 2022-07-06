@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import * as usersService from '../utilities/users-service'
 import './NavBar.css'
-export default function NavBar({ user, setUser }) {
+import SearchBar from "./SearchBar"
+export default function NavBar({ user, setUser, findGame }) {
     // Add the following function
     function handleLogOut() {
         // Delegate to the users-service
@@ -12,6 +13,7 @@ export default function NavBar({ user, setUser }) {
     return (
         <div className="bar">
             <nav className="NavBar">
+                <SearchBar findGame={findGame} />
                 <Link className="NavLink" to='/'>Home</Link>
 
                 <Link className="NavLink" to='/user'>Library</Link>
