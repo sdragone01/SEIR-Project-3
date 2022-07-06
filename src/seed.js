@@ -10,7 +10,7 @@ export const games = [
     {
         title: "Life in the Fast Lane",
         genre: "genre",
-        description: "game by Chris",
+        description: "outstanding game by Chris depicting the real life antics of a street racer on the run from the laws",
         link: "https://chapachris16.github.io/Life-In-The-Fast-Lane/",
         img: "Image Here"
 
