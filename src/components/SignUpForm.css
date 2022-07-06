@@ -22,7 +22,7 @@
 
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,7 +32,7 @@ form {
     margin-left: 5%;
 }
 
-label {
+.formLabel {
     display: flex;
     font-size: xx-large;
     margin-left: 10%;
@@ -41,7 +41,7 @@ label {
 
 }
 
-input {
+.formInput {
     color: white;
     height: 20px;
     background-color: rgba(107, 96, 127, 0.527);
@@ -52,7 +52,7 @@ input {
     font-style: normal;
 }
 
-hr {
+.line {
     display: flex;
     height: 1.5px;
     background-color: white;
@@ -61,7 +61,7 @@ hr {
     width: 70px;
 }
 
-button {
+.formButt {
     font-family: futura-pt, sans-serif;
     font-style: normal;
     font-size: larger;

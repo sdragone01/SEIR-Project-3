@@ -1,9 +1,12 @@
 import './AuthPage.css'
-import SignUpButt from './SignUpPage'
+
+import SignUpWindow from '../SignUpWindow'
 import LogInButt from './LogInPage'
 import Logo from './logo.svg'
 import Tag from './titlebar.svg'
 
+import { Routes, Route } from "react-router-dom";
+import SignUpButt from './SignUpPage'
 
 
 
@@ -14,9 +17,9 @@ export default function AuthPage({ setUser }) {
             <div className='headder'>
                 <img className="logo" src={Logo} width="200px" />
                 <div className='nav'>
-                    <h1>Home</h1>
-                    <h1>About us</h1>
-                    <h1>Contact</h1>
+                    <h1 className='navItem'>Home</h1>
+                    <h1 className='navItem'>About us</h1>
+                    <h1 className='navItem'>Contact</h1>
                 </div>
             </div>
 
@@ -25,7 +28,10 @@ export default function AuthPage({ setUser }) {
                     <img src={Tag} width="750px" />
                 </div>
                 <div className='signUpButt'>
-                    <SignUpButt setUser={setUser} />
+                    <SignUpButt />
+                    <Routes>
+                        <Route path="/signup" element={<SignUpWindow />}>Signup</Route>
+                    </Routes>
                 </div>
                 <div className='logInButt'>
                     <LogInButt setUser={setUser} />

@@ -40,28 +40,28 @@ export default class SignUpForm extends Component {
         return (
             <div className="board">
                 <div className="form-container">
-                    <form autoComplete="off" onSubmit={this.handleSubmit}>
+                    <form className="form" autoComplete="off" onSubmit={this.handleSubmit}>
                         <div className="name">
-                            <label>Name</label>
-                            <hr />
-                            <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+                            <label className="formLabel">Name</label>
+                            <hr className="line" />
+                            <input className="formInput" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
                         </div>
                         <div className="email">
-                            <label>Email</label>
-                            <hr />
-                            <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+                            <label className="formLabel">Email</label>
+                            <hr className="line" />
+                            <input className="formInput" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
                         </div>
                         <div className="pass">
-                            <label>Password</label>
-                            <hr />
-                            <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+                            <label className="formLabel">Password</label>
+                            <hr className="line" />
+                            <input className="formInput" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
                         </div>
                         <div className="conf">
-                            <label>Confirm</label>
-                            <hr />
-                            <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
+                            <label className="formLabel">Confirm</label>
+                            <hr className="line" />
+                            <input className="formInput" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
                         </div>
-                        <button type="submit" disabled={disable}>SIGN UP</button>
+                        <button className="formButt" type="submit" disabled={disable}>SIGN UP</button>
                     </form>
                 </div>
                 <p className="error-message">&nbsp;{this.state.error}</p>
