@@ -18,14 +18,14 @@ export default function AddGameForm() {
     }
     return (
         <>
-            <form onSubmit={ }>
+            {/* <form onSubmit={ }>
                 <input type="text" onChange={(e) => setField('title', e.target.value)} value={form.title} name='title' />
                 <input type="text" onChange={ } value={genre} name='genre' />
                 <input type="text" onChange={ } value={description} name='description' />
                 <input type="text" onChange={ } value={link} name='link' />
                 <input type="text" onChange={ } value={img} name='img' />
                 <button type='submit'></button>
-            </form>
+            </form> */}
         </>
     )
 }
