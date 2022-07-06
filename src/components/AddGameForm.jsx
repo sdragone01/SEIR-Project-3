@@ -15,6 +15,8 @@ export default function AddGameForm() {
     }
     return (
         <>
+
+
             <form>
                 <input type="text" onChange={handleChange} value={title} name='title' />
                 <input type="text" onChange={handleChange} value={genre} name='genre' />
@@ -23,6 +25,7 @@ export default function AddGameForm() {
                 <input type="text" onChange={handleChange} value={img} name='img' />
                 <button onClick={handleSubmit} type='submit'></button>
             </form>
+
         </>
     )
 }
