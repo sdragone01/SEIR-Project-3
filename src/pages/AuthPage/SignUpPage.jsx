@@ -1,20 +1,26 @@
 import './AuthPage.css'
-
+import SignUpForm from "../../components/SignUpForm"
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 
+class SignUpButt extends Component {
+    state = { showForm: false }
 
-export default function SignUpButt() {
+    showSignupForm = () => {
+        return (
+            <div>
+                <SignUpForm />
+                <button onClick={() => this.setState({ showForm: false })}> Close</button>
+            </div>
+        );
+    }
 
-
-
-    return (
-        <div>
-            <Link to="/signup">Signup</Link>
-
-        </div>
-    )
-
-
-
+    render() {
+        return (
+            <div>
+                <button className='signUp' onClick={() => this.setState({ showForm: true })}>Signup</button>
+                {this.state.showForm ? this.showSignupForm() : null}
+            </div>
+        );
+    }
 }
+export default SignUpButt

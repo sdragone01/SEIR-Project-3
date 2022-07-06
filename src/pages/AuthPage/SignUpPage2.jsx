@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Popup from '../../components/Popup'
-import LogInForm from '../../components/LogInForm'
+import SignUpForm from '../../components/SignUpForm'
 import { getUser } from "../../utilities/users-service";
 
 
-function LogInPage() {
+function SignUpPage2() {
     const [user, setUser] = useState(getUser())
     const [isOpen, setIsOpen] = useState(false)
     const togglePopup = () => {
@@ -14,12 +14,12 @@ function LogInPage() {
     }
     return (
         <div>
-            <input type="button" value="Login"
+            <input type="button" value="Signup"
                 onClick={togglePopup}
             />
             {isOpen && <Popup content={
                 <>
-                    <LogInForm setUser={setUser} />
+                    <SignUpForm setUser={setUser} />
                 </>
             }
                 handleClose={togglePopup}
@@ -29,4 +29,4 @@ function LogInPage() {
     )
 }
 
-export default LogInPage
+export default SignUpPage2

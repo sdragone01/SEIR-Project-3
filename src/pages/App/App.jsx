@@ -18,7 +18,31 @@ export default function App() {
   const [user, setUser] = useState(getUser())
   const [gamesArr, setGamesArr] = useState([])
   let gameResults = []
-    
+
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(
+            `This is an HTTP error: The status is ${res.status}`
+          )
+        }
+        return res.json()
+      })
+      .then((actualData) => {
+        setIndex(actualData); setError(null)
+      })
+      .catch((err) => {
+        setError(err.message)
+        setIndex(null)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+  }, [])
+
+
   const findGame = async (searchText) => {
     gameResults = await fetch(`https://api.rawg.io/api/games?search=${searchText}&key=${APIKEY}`, {
       method: 'GET'
@@ -49,7 +73,7 @@ export default function App() {
           <SearchBar findGame={findGame} />
           <NavBar className='searchbar' user={user} setUser={setUser} />
           <Routes>
-            <Route path="/user" element={<UserPage/>}/>
+            <Route path="/user" element={<UserPage />} />
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
             <Route path= '/games' element={<GameIndexPage/>} />
@@ -58,7 +82,7 @@ export default function App() {
         </>
         :
         <AuthPage setUser={setUser} />
-        
+
       }
     </main>
   );
