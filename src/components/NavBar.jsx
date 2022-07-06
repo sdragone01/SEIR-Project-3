@@ -13,14 +13,20 @@ export default function NavBar({ user, setUser, findGame }) {
     return (
         <div className="bar">
             <nav className="NavBar">
-                <SearchBar findGame={findGame} />
+
+
+
                 <Link className="NavLink" to='/'>Home</Link>
 
                 <Link className="NavLink" to='/user'>Library</Link>
 
                 <Link className="NavLink" to='/games'>Games</Link>
 
+                <Link className="NavLink" to='/new'>Upload</Link>
+
                 <Link className="NavLink" to="" onClick={handleLogOut}>Log Out</Link>
+
+                <SearchBar className='NavLink' findGame={findGame} />
             </nav>
         </div>
     )
