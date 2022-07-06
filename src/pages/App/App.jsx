@@ -23,8 +23,8 @@ export default function App() {
   const [user, setUser] = useState(getUser())
   const [gamesArr, setGamesArr] = useState([])
   let gameResults = []
-  
-  
+
+
   useEffect(() => {
     fetch(url)
       .then((res) => {
@@ -47,7 +47,7 @@ export default function App() {
       })
   }, [])
 
-  
+
   const findGame = async (searchText) => {
     gameResults = await fetch(`https://api.rawg.io/api/games?search=${searchText}&key=${APIKEY}`, {
       method: 'GET'
@@ -76,7 +76,7 @@ export default function App() {
           <SearchBar findGame={findGame} />
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/user" element={<UserPage/>}/>
+            <Route path="/user" element={<UserPage />} />
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
           </Routes>
@@ -84,7 +84,7 @@ export default function App() {
         </>
         :
         <AuthPage setUser={setUser} />
-        
+
       }
       {/* <RandomGame data={data} /> */}
     </main>
