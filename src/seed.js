@@ -1,4 +1,4 @@
-export const seedGames = [
+export const games = [
     {
         title: "Pokemon Menthol Juul",
         genre: "RPG",

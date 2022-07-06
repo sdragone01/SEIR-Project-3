@@ -1,7 +1,10 @@
 import GameCard from "../GameCard/GameCard"
+import './GameIndex.css'
 
 export default function GameIndexPage() {
     return (
-        <GameCard />
+        <div className="GameIndex">
+            <GameCard />
+        </div>
     )
 }
