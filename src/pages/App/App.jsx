@@ -53,8 +53,7 @@ export default function App() {
     <main className="App">
       {user ?
         <>
-          <SearchBar findGame={findGame} />
-          <NavBar className='searchbar' user={user} setUser={setUser} />
+          <NavBar className='searchbar' user={user} setUser={setUser} findGame={findGame}/>
           <Routes>
             <Route path="/" />
             <Route
