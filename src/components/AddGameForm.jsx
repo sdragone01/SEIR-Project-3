@@ -15,14 +15,14 @@ export default function AddGameForm() {
     }
     return (
         <>
-
+        <h1>Add Game</h1>
 
             <form>
-                <input type="text" onChange={handleChange} value={title} name='title' />
-                <input type="text" onChange={handleChange} value={genre} name='genre' />
-                <input type="text" onChange={handleChange } value={description} name='description' />
-                <input type="text" onChange={handleChange} value={link} name='link' />
-                <input type="text" onChange={handleChange} value={img} name='img' />
+                <input type="text" onChange={handleChange} value={''} name='title' />
+                <input type="text" onChange={handleChange} value={''} name='genre' />
+                <input type="text" onChange={handleChange } value={''} name='description' />
+                <input type="text" onChange={handleChange} value={''} name='link' />
+                <input type="text" onChange={handleChange} value={''} name='img' />
                 <button onClick={handleSubmit} type='submit'></button>
             </form>
 
