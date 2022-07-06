@@ -9,6 +9,7 @@ import Tag from './titlebar.svg'
 import { Routes, Route } from "react-router-dom";
 import SignUpButt from './SignUpPage'
 import SignUpPage2 from './SignUpPage2'
+import LogInPage from './LogInPage'
 
 
 
@@ -34,7 +35,7 @@ export default function AuthPage({ setUser }) {
 
                 </div>
                 <div className='logInButt'>
-                    <LogInButt setUser={setUser} />
+                    <LogInPage setUser={setUser} />
                 </div>
             </div>
 

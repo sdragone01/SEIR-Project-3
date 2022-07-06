@@ -1,30 +1,32 @@
-import './AuthPage.css'
-import LoginForm from "../../components/LogInForm"
-import React, { Component } from 'react';
+import React, { useState } from 'react'
+import Popup from '../../components/Popup'
+import LogInForm from '../../components/LogInForm'
+import { getUser } from "../../utilities/users-service";
 
 
-class LogInButt extends Component {
-    state = { showForm: false }
+function LogInPage() {
+    const [user, setUser] = useState(getUser())
+    const [isOpen, setIsOpen] = useState(false)
+    const togglePopup = () => {
+        setIsOpen(!isOpen)
 
 
-    showLogInForm = () => {
-        return (
-            <>
-                <LoginForm />
-                <button onClick={() => this.setState({ showForm: false })}> Close</button>
-
-            </>
-        );
     }
+    return (
+        <div>
+            <input type="button" value="Login"
+                onClick={togglePopup}
+            />
+            {isOpen && <Popup content={
+                <>
+                    <LogInForm setUser={setUser} />
+                </>
+            }
+                handleClose={togglePopup}
+            />}
 
-    render() {
-        return (
-            <div >
-                <button className='logIn' onClick={() => this.setState({ showForm: true })}>Login</button>
-                {this.state.showForm ? this.showLogInForm() : null}
-            </div>
-        );
-    }
-
+        </div>
+    )
 }
-export default LogInButt
+
+export default LogInPage
