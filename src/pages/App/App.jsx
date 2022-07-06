@@ -10,6 +10,8 @@ import SearchBar from "../../components/SearchBar";
 import GameList from "../../components/GameList";
 import UserPage from "../UserPage";
 import GameIndexPage from "../GameIndex/GameIndex";
+import GameDetails from "../GameDetails/GameDetails"
+import { games } from "../../seed"
 
 
 const APIKEY = '3498f188321247eb96dee04d1c8e0928'
@@ -55,6 +57,9 @@ export default function App() {
           <NavBar className='searchbar' user={user} setUser={setUser} />
           <Routes>
             <Route path="/" />
+            <Route
+              path="/games/:gameName"
+              element={<GameDetails games={games} />} />
             <Route path="/user" element={<UserPage />} />
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />

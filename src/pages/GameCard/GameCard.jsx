@@ -1,19 +1,23 @@
-import { seedGames } from "../../seed"
+import { games } from "../../seed"
+import { Link } from "react-router-dom";
 
 
 export default function GameCard() {
     return (
-        <div className="GameCard">
-            {seedGames.map((game) => {
+        <div className="GameGrid">
+            {games.map((game) => {
                 return (
-                    <>
-                        <h1>{game.title}</h1>
-                        <h1>{game.genre}</h1>
-                        <h1>{game.description}</h1>
-                        <h1>{game.link}</h1>
-                        <h1>{game.img}</h1>
+                    <Link to={`/games/${game.title}`}>
 
-                    </>
+                        <div className="gameCard" key={game.title}>
+                            <div className="gameTag">
+                                <h2 id="title">{game.title}</h2>
+                                <p>Genre: {game.genre}</p>
+                            </div>
+
+                        </div>
+
+                    </Link>
                 )
             })}
         </div>
