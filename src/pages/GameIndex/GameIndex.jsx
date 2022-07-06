@@ -1,5 +1,7 @@
-export default function GameIndexPage(){
+import GameCard from "../GameCard/GameCard"
+
+export default function GameIndexPage() {
     return (
-        <h1>Game Index Page</h1>
+        <GameCard />
     )
 }
