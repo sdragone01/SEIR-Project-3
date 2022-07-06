@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SelectSearch from "react-select-search"
+
 
 export default function SearchBar({ findGame }) {
   const [searchText, setSearchText] = useState("");
