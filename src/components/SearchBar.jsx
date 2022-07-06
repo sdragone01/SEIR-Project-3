@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SelectSearch from "react-select-search"
 
 export default function SearchBar({ findGame }) {
   const [searchText, setSearchText] = useState("");
@@ -18,6 +19,7 @@ export default function SearchBar({ findGame }) {
   }
   return (
     <div>
+
       <form onSubmit={handleSubmit}>
         <input onChange={handleChange} value={searchText} name="searchBar" />
         <button type="submit">Search</button>
