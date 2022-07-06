@@ -1,0 +1,16 @@
+.NavBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: auto;
+    padding: 20px;
+    margin: 10px;
+}
+.App {
+    display: flex;
+    margin-right: auto;
+}
+.NavLink {
+    display: flex;
+    gap: 50px
+}
