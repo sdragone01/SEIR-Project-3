@@ -1,0 +1,13 @@
+.AddGame {
+    display: flex;
+    padding: auto;
+    margin: 70px;
+}
+
+.GameInfo {
+    display: flex;
+    position: relative;
+    align-item: center;
+    margin-left: 50%;
+    height: 5%;    
+}

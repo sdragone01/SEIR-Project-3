@@ -1,4 +1,4 @@
-
+import './AddGameForm.css'
 import { useState } from "react"
 
 export default function AddGameForm() {
@@ -15,9 +15,9 @@ export default function AddGameForm() {
     }
     return (
         <>
-        <h1>Add Game</h1>
+        <h1 className='AddGame'>Add Game</h1>
 
-            <form>
+            <form className='GameInfo'>
                 <input type="text" onChange={handleChange} value={''} name='title' />
                 <input type="text" onChange={handleChange} value={''} name='genre' />
                 <input type="text" onChange={handleChange } value={''} name='description' />
