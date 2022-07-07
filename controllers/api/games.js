@@ -12,7 +12,13 @@ async function create(req, res) {
         res.status(400).json(err)
     }
 }
-function find(req, res) {
-    res.json(req.exp);
+async function find(req, res) {
+    try {
+        const game = await Game.find({})
+        res.json(game)
+
+    } catch (err) {
+        res.status(400).json(err)
+    }
 
 }
