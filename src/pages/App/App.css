@@ -1,6 +1,15 @@
+html,
+body {
+  margin: 0;
+}
+
 .App {
-  display: flex;
-  background: url(../../../Assets/background\ thing\ app\ copy.png);
-  background-size: cover;
+  background-image: url(../../../Assets/background\ thing\ app\ copy.png);
   height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
