@@ -1,6 +1,8 @@
 import './AddGameForm.css'
 import { Component } from "react"
 import { addGame } from '../utilities/games-api'
+const axios = require('axios').default;
+
 export default class AddGameForm extends Component {
 
     state = {
@@ -20,15 +22,25 @@ export default class AddGameForm extends Component {
         })
     }
 
-    handleSubmit = async (evt) => {
-        evt.preventDefault()
-        try {
-            const formData = { ...this.state }
-            delete formData.error
-            await addGame(formData)
-        } catch {
-            this.setState({ error: 'Adding Game Failed - Try Again' })
-        }
+    // handleSubmit = async (evt) => {
+    //     evt.preventDefault()
+    //     try {
+    //         const formData = { ...this.state }
+    //         delete formData.error
+    //         await addGame(formData)
+    //     } catch {
+    //         this.setState({ error: 'Adding Game Failed - Try Again' })
+    //     }
+    // }
+
+    onSubmit = (e) => {
+        e.preventDefault()
+        const { title, genre, description, link, img, price, error } = this.state
+
+        axios.post('api/games', { title, genre, description, link, img, price, error })
+            .then((result) => {
+                console.log(result)
+            })
     }
 
     render() {
@@ -49,7 +61,8 @@ export default class AddGameForm extends Component {
                     <input type="text" onChange={this.handleChange} value={this.state.img} name='img' />
                     Price
                     <input type="number" onChange={this.handleChange} value={this.state.price} name='price' />
-                    <button onClick={this.handleSubmit} type='submit'>SUBMIT</button>
+                    <button onClick={this.onSubmit} type='submit'
+                    >SUBMIT</button>
                 </form>
 
             </>

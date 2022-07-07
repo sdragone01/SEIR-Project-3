@@ -1,25 +1,24 @@
-import { games } from "../../seed"
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React from "react";
 
+const baseURL = 'api/games';
 
 export default function GameCard() {
+    const [post, setPost] = React.useState(null);
+
+    React.useEffect(() => {
+        axios.get(baseURL).then((response) => {
+            console.log(response)
+
+        });
+    }, []);
+
+    if (!post) return null;
+    console.log(post.title)
+
     return (
-        <div className="GameGrid">
-            {games.map((game) => {
-                return (
-                    <Link to={`/games/${game.title}`}>
-
-                        <div className="gameCard" key={game.title}>
-                            <div className="gameTag">
-                                <h2 id="title">{game.title}</h2>
-                                <p>Genre: {game.genre}</p>
-                            </div>
-
-                        </div>
-
-                    </Link>
-                )
-            })}
+        <div>
+            <h1>GAME</h1>
         </div>
     )
 }
