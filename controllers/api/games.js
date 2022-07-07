@@ -1,6 +1,6 @@
 const Game = require('../../models/games')
 
-module.export = {
+module.exports = {
     create,
 }
 
