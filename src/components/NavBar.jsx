@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import * as usersService from '../utilities/users-service'
 import './NavBar.css'
 import SearchBar from "./SearchBar"
+import AddGameForm from './AddGameForm'
 export default function NavBar({ user, setUser, findGame }) {
     // Add the following function
     function handleLogOut() {
