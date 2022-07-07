@@ -3,5 +3,6 @@ const router = express.Router();
 const gamesCtrl = require('../../controllers/api/games')
 
 router.post('/', gamesCtrl.create)
+router.get('/', gamesCtrl.find)
 
 module.exports = router

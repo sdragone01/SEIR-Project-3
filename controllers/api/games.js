@@ -2,6 +2,7 @@ const Game = require('../../models/games')
 
 module.exports = {
     create,
+    find
 }
 
 async function create(req, res) {
@@ -10,4 +11,8 @@ async function create(req, res) {
     } catch (err) {
         res.status(400).json(err)
     }
+}
+function find(req, res) {
+    res.json(req.exp);
+
 }
