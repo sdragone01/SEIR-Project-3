@@ -1,13 +1,17 @@
 .AddGame {
+    color: white;
     display: flex;
     padding: auto;
-    margin: 70px;
+    margin-top: 10%;
+
 }
 
 .GameInfo {
+    margin-top: 15%;
     display: flex;
     position: relative;
-    align-item: center;
-    margin-left: 50%;
+    align-items: center;
     height: 5%;    
+    flex-direction: column;
+    row-gap: 20px;
 }

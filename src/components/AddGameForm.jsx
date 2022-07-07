@@ -1,31 +1,51 @@
 import './AddGameForm.css'
-import { useState } from "react"
+import { Component } from "react"
 
-export default function AddGameForm() {
-    const [newGame, setNewGame] = useState({})
+export default class AddGameForm extends Component {
     
-    function handleSubmit(event){
-        event.preventDefault()
-        setNewGame({})
-
+    state = {
+        title: '',
+        genre: '',
+        description: '',
+        link: '',
+        img: '',
+        price: Number,
+        error: ''
     }
 
-    const handleChange = (e) => {
-        
+    handleChange = (evt) => {
+        this.setState({
+            [evt.target.name]: evt.target.value,
+            error:''
+        })
     }
+
+    handleSubmit =  async (evt) => {
+        evt.preventDefault()
+        try {
+            const formData = {...this.state}
+            delete formData.error
+        } catch{
+            this.setState({error: 'Adding Game Failed - Try Again'})
+        }
+    }
+
+    render(){
     return (
         <>
         <h1 className='AddGame'>Add Game</h1>
 
             <form className='GameInfo'>
-                <input type="text" onChange={handleChange} value={''} name='title' />
-                <input type="text" onChange={handleChange} value={''} name='genre' />
-                <input type="text" onChange={handleChange } value={''} name='description' />
-                <input type="text" onChange={handleChange} value={''} name='link' />
-                <input type="text" onChange={handleChange} value={''} name='img' />
-                <button onClick={handleSubmit} type='submit'></button>
+                <input type="text" onChange={this.handleChange} value={this.state.title} name='title' />
+                <input type="text" onChange={this.handleChange} value={this.state.genre} name='genre' />
+                <input type="text" onChange={this.handleChange } value={this.state.description} name='description' />
+                <input type="text" onChange={this.handleChange} value={this.state.link} name='link' />
+                <input type="text" onChange={this.handleChange} value={this.state.img} name='img' />
+                <input type="number" onChange={this.handleChange} value={this.state.price} name='price' />
+                <button onClick={this.handleSubmit} type='submit'></button>
             </form>
 
         </>
     )
+    }
 }

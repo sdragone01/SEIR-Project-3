@@ -27,7 +27,12 @@ const gameSchema = new Schema({
     {
         type: String,
         required: false,
-    }
+    },
+    price:
+    {
+        type: Number,
+        required: true
+    },
 }, {
     timestamps: true,
 
