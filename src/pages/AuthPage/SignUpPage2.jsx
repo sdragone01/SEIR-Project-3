@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Popup from '../../components/Popup'
 import SignUpForm from '../../components/SignUpForm'
-import { getUser } from "../../utilities/users-service";
 
 
-function SignUpPage2() {
-    const [user, setUser] = useState(getUser())
+
+function SignUpPage2({ setUser }) {
+
     const [isOpen, setIsOpen] = useState(false)
     const togglePopup = () => {
         setIsOpen(!isOpen)
