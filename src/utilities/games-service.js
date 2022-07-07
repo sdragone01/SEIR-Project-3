@@ -1,0 +1,1 @@
+import * as gamesAPI from './games-api'
