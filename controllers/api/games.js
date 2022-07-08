@@ -3,7 +3,8 @@ const Game = require('../../models/games')
 module.exports = {
     create,
     find,
-    findOne
+    findOne,
+    remove
 }
 
 async function create(req, res) {
@@ -33,4 +34,13 @@ async function findOne(req, res) {
         res.status(400).json(err)
     }
 
+}
+
+async function remove(req, res) {
+    try {
+        const game = await Game.findByIdAndRemove(req.params.gameId)
+        console.log(`deleted ${res.json(game)}`)
+    } catch (err) {
+        res.status(400).json(err)
+    }
 }
