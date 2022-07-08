@@ -41,9 +41,13 @@ export default function GameDetailPage() {
     }
 
     function handleChange (e) {
+        // const newGame = {
+
+        // }
         setGame({
             game
         })
+        // console.log("handleChange")
     }
 
 
@@ -54,17 +58,17 @@ export default function GameDetailPage() {
             <h1>Hello Edit</h1>
             <form className='GameInfo'>
                     Title
-                    <input type="text" placeholder={game.title} value={game.title} onChange={handleChange}/>
+                    <input type="text" placeholder={game.title} defaultValue={game.title} onChange={handleChange}/>
                     Genre
-                    <input type="text" placeholder={game.genre} value={game.genre} onChange={handleChange}/>
+                    <input type="text" placeholder={game.genre} defaultValue={game.genre} onChange={handleChange}/>
                     Description
-                    <input type="text"  placeholder={game.description} value={game.description} onChange={handleChange}/>
+                    <input type="text"  placeholder={game.description} defaultValue={game.description} onChange={handleChange}/>
                     Link
-                    <input type="text"  placeholder={game.link} value={game.link} onChange={handleChange}/>
+                    <input type="text"  placeholder={game.link} defaultValue={game.link} onChange={handleChange}/>
                     Image
-                    <input type="text"  placeholder={game.image} value={game.image} onChange={handleChange}/>
+                    <input type="text"  placeholder={game.image} defaultValue={game.image} onChange={handleChange}/>
                     Price
-                    <input type="number"  placeholder={game.price} value={game.price} onChange={handleChange}/>
+                    <input type="number"  placeholder={game.price} defaultValue={game.price} onChange={handleChange}/>
                     <button type='submit' onClick={onSubmit}
                     >SUBMIT</button>
                 </form>

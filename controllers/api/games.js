@@ -42,7 +42,8 @@ async function edit(req, res) {
         const game = await Game.findByIdAndUpdate(req.params.gameId, {
             title: req.body.title,
         })
-            res.json(game)
+        console.log(req)
+        res.json(game)
     } catch (err) {
         res.status(400).json(err)
     }
