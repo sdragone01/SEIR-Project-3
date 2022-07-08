@@ -5,6 +5,7 @@ const gamesCtrl = require('../../controllers/api/games')
 router.post('/', gamesCtrl.create)
 router.get('/', gamesCtrl.find)
 router.get('/:gameId', gamesCtrl.findOne)
+router.delete('/:gameId', gamesCtrl.remove)
 
 
 module.exports = router
