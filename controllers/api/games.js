@@ -38,11 +38,13 @@ async function findOne(req, res) {
 }
 
 async function edit(req, res) {
+    console.log('body',req.body)
     try {
-        const game = await Game.findByIdAndUpdate(req.params.gameId, {
-            title: req.body.title,
-        })
-        console.log(req)
+        const game = await Game.findByIdAndUpdate(
+            req.params.gameId, 
+            req.body,
+            {new: true}
+        )
         res.json(game)
     } catch (err) {
         res.status(400).json(err)

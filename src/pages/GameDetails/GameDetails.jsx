@@ -24,7 +24,7 @@ export default function GameDetailPage() {
     }
 
     async function editGame() {
-        axios.put(`${baseURL}/${gameId}`).then((editGame) => {
+        axios.put(`${baseURL}/${gameId}/edit`, game).then((editGame) => {
             console.log(editGame)
         })
     }
@@ -34,21 +34,15 @@ export default function GameDetailPage() {
         setEdit(true)
     }
 
-    function onSubmit(e) {
+    function handleSubmit(e) {
         e.preventDefault()
         editGame()
 
     }
 
-    function handleChange (e) {
-        // const newGame = {
-
-        // }
-        setGame({
-            game
-        })
-        // console.log("handleChange")
-    }
+    function handleChange(e) {
+        setGame({ ...game, [e.target.name]: e.target.value });
+      }
 
 
     return (
@@ -56,21 +50,22 @@ export default function GameDetailPage() {
             {edit ?
             <>
             <h1>Hello Edit</h1>
-            <form className='GameInfo'>
+            <form className='GameInfo' onSubmit={handleSubmit}>
                     Title
-                    <input type="text" placeholder={game.title} defaultValue={game.title} onChange={handleChange}/>
+                    <input type="text" placeholder={game.title} value={game.title} name='title' onChange={handleChange}/>
                     Genre
-                    <input type="text" placeholder={game.genre} defaultValue={game.genre} onChange={handleChange}/>
+                    <input type="text" placeholder={game.genre} value={game.genre} name='genre' onChange={handleChange}/>
                     Description
-                    <input type="text"  placeholder={game.description} defaultValue={game.description} onChange={handleChange}/>
+                    <input type="text"  placeholder={game.description} value={game.description} name='description' onChange={handleChange}/>
                     Link
-                    <input type="text"  placeholder={game.link} defaultValue={game.link} onChange={handleChange}/>
+                    <input type="text"  placeholder={game.link} value={game.link} name='link' onChange={handleChange}/>
                     Image
-                    <input type="text"  placeholder={game.image} defaultValue={game.image} onChange={handleChange}/>
+                    <input type="text"  placeholder={game.image} value={game.image} name='image' onChange={handleChange}/>
                     Price
-                    <input type="number"  placeholder={game.price} defaultValue={game.price} onChange={handleChange}/>
-                    <button type='submit' onClick={onSubmit}
-                    >SUBMIT</button>
+                    <input type="number"  placeholder={game.price} value={game.price} 
+                   name='price' onChange={handleChange}/>
+
+                    <button type='submit'>SUBMIT</button>
                 </form>
                 </>
             :
