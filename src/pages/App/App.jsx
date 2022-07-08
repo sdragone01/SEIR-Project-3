@@ -57,8 +57,8 @@ export default function App() {
           <Routes>
             <Route path="/" />
             <Route
-              path="/games/:gameName"
-              element={<GameDetails games={games} />} />
+              path="games/:gameId"
+              element={<GameDetails />} />
             <Route path="/user" element={<UserPage />} />
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
