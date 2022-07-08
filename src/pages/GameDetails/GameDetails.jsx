@@ -16,6 +16,11 @@ export default function GameDetailPage() {
         });
     }, []);
 
+    async function removeGame () {
+        axios.delete(`${baseURL}/${gameId}`).then((deletedGame) => {
+            console.log(deletedGame)
+        })
+    }
 
     // let game = games.find((gam) => gam.title === gameName);
 
@@ -25,10 +30,12 @@ export default function GameDetailPage() {
 
                 <>
                     < h1 > {game.title}</h1 >
+                    <button onClick={removeGame}>Delete</button>
 
                 </>
                 :
                 <h1>game not found</h1>
+            
 
             }
         </div>
