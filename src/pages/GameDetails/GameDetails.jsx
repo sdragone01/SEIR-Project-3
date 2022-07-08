@@ -23,16 +23,29 @@ export default function GameDetailPage() {
         })
     }
 
-    // async function editGame() {
-    //     axios.delete(`${baseURL}/${gameId}`).then((editGame) => {
-    //         console.log(editGame)
-    //     })
-    // }
+    async function editGame() {
+        axios.put(`${baseURL}/${gameId}`).then((editGame) => {
+            console.log(editGame)
+        })
+    }
     // let game = games.find((gam) => gam.title === gameName);
 
     function editForm () {
         setEdit(true)
     }
+
+    function onSubmit(e) {
+        e.preventDefault()
+        editGame()
+
+    }
+
+    function handleChange (e) {
+        setGame({
+            game
+        })
+    }
+
 
     return (
         <div>
@@ -41,18 +54,18 @@ export default function GameDetailPage() {
             <h1>Hello Edit</h1>
             <form className='GameInfo'>
                     Title
-                    <input type="text" value={game.title}/>
+                    <input type="text" placeholder={game.title} value={game.title} onChange={handleChange}/>
                     Genre
-                    <input type="text" value={game.genre}/>
+                    <input type="text" placeholder={game.genre} value={game.genre} onChange={handleChange}/>
                     Description
-                    <input type="text"  value={game.description}/>
+                    <input type="text"  placeholder={game.description} value={game.description} onChange={handleChange}/>
                     Link
-                    <input type="text"  value={game.link}/>
+                    <input type="text"  placeholder={game.link} value={game.link} onChange={handleChange}/>
                     Image
-                    <input type="text"  value={game.image}/>
+                    <input type="text"  placeholder={game.image} value={game.image} onChange={handleChange}/>
                     Price
-                    <input type="number"  value={game.price}/>
-                    <button type='submit'
+                    <input type="number"  placeholder={game.price} value={game.price} onChange={handleChange}/>
+                    <button type='submit' onClick={onSubmit}
                     >SUBMIT</button>
                 </form>
                 </>
