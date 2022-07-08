@@ -22,6 +22,11 @@ export default function GameDetailPage() {
         })
     }
 
+    // async function editGame() {
+    //     axios.delete(`${baseURL}/${gameId}`).then((editGame) => {
+    //         console.log(editGame)
+    //     })
+    // }
     // let game = games.find((gam) => gam.title === gameName);
 
     return (

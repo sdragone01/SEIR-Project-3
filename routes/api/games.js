@@ -6,7 +6,7 @@ router.post('/', gamesCtrl.create)
 router.get('/', gamesCtrl.find)
 router.get('/:gameId', gamesCtrl.findOne)
 router.delete('/:gameId', gamesCtrl.remove)
-router.put('/:gameId', gamesCtrl.edit)
+router.post('/:gameId', gamesCtrl.edit)
 
 
 module.exports = router
