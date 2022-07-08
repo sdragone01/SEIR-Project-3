@@ -16,6 +16,11 @@ export default function GameDetailPage() {
         });
     }, []);
 
+    async function removeGame () {
+        axios.delete(`${baseURL}/${gameId}`).then((deletedGame) => {
+            console.log(deletedGame)
+        })
+    }
 
     // let game = games.find((gam) => gam.title === gameName);
 
@@ -25,12 +30,23 @@ export default function GameDetailPage() {
 
                 <>
                     < h1 > {game.title}</h1 >
+                    < h1 > {game.image}</h1 >
+                    < h1 > {game.link}</h1 >
+                    <hr /> 
+                    < h1 > {game.description}</h1 >
+                    < h1 > {game.genre}</h1 >
+                    < h1 > {game.price}</h1 >
+                    
+                    <button onClick={removeGame}>Delete</button>
 
                 </>
                 :
                 <h1>game not found</h1>
+            
 
             }
         </div>
     );
 }
+
+
