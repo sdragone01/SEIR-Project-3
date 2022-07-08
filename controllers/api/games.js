@@ -4,7 +4,8 @@ module.exports = {
     create,
     find,
     findOne,
-    remove
+    remove,
+    edit
 }
 
 async function create(req, res) {
@@ -34,6 +35,18 @@ async function findOne(req, res) {
         res.status(400).json(err)
     }
 
+}
+
+async function edit(req, res) {
+    try {
+        const game = await Game.findByIdAndUpdate(req.params.gameId, {
+            title: req.body.title,
+        })
+        console.log(req)
+        res.json(game)
+    } catch (err) {
+        res.status(400).json(err)
+    }
 }
 
 async function remove(req, res) {
