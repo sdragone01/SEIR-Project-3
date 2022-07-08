@@ -1,18 +1,36 @@
 import { useParams } from "react-router-dom";
 import GameCard from '../GameCard/GameCard.jsx'
+import axios from "axios";
+import React from "react";
 import "./GameDetails.css";
-export default function GameDetailPage({ games }) {
-    let { gameName } = useParams();
-    let game = games.find((gam) => gam.title === gameName);
-    
+
+const baseURL = '/api/games'
+
+export default function GameDetailPage() {
+    const [game, setGame] = React.useState(null);
+    let { gameId } = useParams();
+    React.useEffect(() => {
+        axios.get(`${baseURL}/${gameId}`).then((foundGame) => {
+
+            setGame(foundGame.data)
+        });
+    }, []);
+
+
+    // let game = games.find((gam) => gam.title === gameName);
+
     return (
-        <div className="info">
-            <div className="textInfo">
-                <h1>{game.title}</h1>
-                <h3>Genre: {game.genre}</h3>
-                <button onClick={() => this.props.add({GameCard})}>Add to Library</button>
-                <iframe src={game.link} frameBorder='0' allowfullscreen ></iframe>
-            </div>
+        <div>
+            {game ?
+
+                <>
+                    < h1 > {game.title}</h1 >
+
+                </>
+                :
+                <h1>game not found</h1>
+
+            }
         </div>
     );
 }

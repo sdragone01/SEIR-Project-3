@@ -3,8 +3,8 @@ import './GameIndex.css'
 
 export default function GameIndexPage() {
     return (
-        <div >
-            <h1>HELLO</h1>
+        <div className="GameIndex">
+
             <GameCard />
         </div>
     )

@@ -1,16 +1,17 @@
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom"
+import './GameCard.css'
 
 const baseURL = 'api/games';
 
-export default function GameCard({ game }) {
+export default function GameCard() {
     const [post, setPost] = React.useState(null);
 
     React.useEffect(() => {
         axios.get(baseURL).then((post) => {
             setPost(post)
-            console.log(post.data.title)
+
 
         });
     }, []);
@@ -21,7 +22,7 @@ export default function GameCard({ game }) {
         <div className="GameGrid">
             {post.data.map((game) => {
                 return (
-                    <Link to={`/games/${game.title}`}>
+                    <Link to={`/games/${game._id}`} key={game._id}>
 
                         <div className="gameCard" key={game.title}>
                             <div className="gameTag">
