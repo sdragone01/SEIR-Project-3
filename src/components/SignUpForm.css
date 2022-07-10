@@ -1,4 +1,4 @@
-.container {
+.signup-container {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -10,6 +10,7 @@
         "Img Form Form"
         "Img Form Form"
         "Img Form Form";
+    z-index: 6;
 }
 
 .Form-One-Img {
@@ -18,13 +19,14 @@
     background-size: cover;
 
 
+
 }
 
 .img-src {
     width: 100%;
 }
 
-.Form {
+.signup-Form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
@@ -41,7 +43,7 @@
 
 }
 
-.Head {
+.signup-Head {
     grid-area: Head;
     padding-left: 10%;
     padding-top: 7%;

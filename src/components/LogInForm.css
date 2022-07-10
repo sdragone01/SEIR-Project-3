@@ -1,4 +1,4 @@
-.container {
+.login-container {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -24,7 +24,7 @@
     width: 100%;
 }
 
-.Form {
+.login-Form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
@@ -41,7 +41,7 @@
 
 }
 
-.Head {
+.login-Head {
     grid-area: Head;
     padding-left: 10%;
     padding-top: 7%;

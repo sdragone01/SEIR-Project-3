@@ -1,20 +1,18 @@
-.about-container {
+.help-container {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "Img Content Content"
         "Img Content Content"
         "Img Content Content"
-        "Img Content Content"
-        "Img Content Content"
-        "Img Content Content";
-    margin-top: -9%;
+    ;
+    margin-top: 25%;
 }
 
-.About-Img {
+.help-Img {
     grid-area: Img;
     background: url(./thunder2.png);
     background-size: cover;
@@ -22,19 +20,23 @@
 
 }
 
-.about-Content {
+.panda {
+    width: auto;
+    border: none;
+    margin-top: -15%;
+}
+
+.help-Content {
     color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "Head Head Head"
         "Body Body Body"
-        "Body Body Body"
-        "Body Body Body"
-        "Body Body Body"
+
         "Foot Foot Foot";
     grid-area: Content;
     background-color: white;
@@ -44,23 +46,16 @@
 
 }
 
-.about-head-line {
-    width: 70px;
-    margin-left: 0%;
-    background-color: black;
-    height: 3px;
-}
 
 
-
-.about-Head {
+.help-Head {
     grid-area: Head;
     color: black;
 
 
 }
 
-.about-Foot {
+.help-Foot {
     grid-area: Foot;
 
 }
@@ -72,26 +67,9 @@
 
 }
 
-.about-headder {
+.help-headder {
 
     font-family: futura-pt, sans-serif;
     font-size: 40px;
-
-    font-weight: 400;
-}
-
-.about-experience {
-
-    font-family: futura-pt, sans-serif;
-    font-size: 30px;
-
-    font-weight: 400;
-}
-
-.about-tech {
-
-    font-family: futura-pt, sans-serif;
-    font-size: 30px;
-
     font-weight: 400;
 }

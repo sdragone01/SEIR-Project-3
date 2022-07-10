@@ -5,12 +5,12 @@ import './AboutGrid.css'
 export default function AboutGrid() {
 
     return (
-        <div className="container">
+        <div className="about-container">
             <div className="About-Img">
 
             </div>
-            <div className="Content">
-                <div className="Head">
+            <div className="about-Content">
+                <div className="about-Head">
                     <h1 className='about-headder'>About Us</h1>
                     <hr className='about-head-line' />
                 </div>
@@ -30,7 +30,7 @@ export default function AboutGrid() {
 
 
                 </div>
-                <div className="Foot">
+                <div className="about-Foot">
                     <p><b>Created By:</b></p>
                     Christopher Chapa, Norberto Cardenales, Sal Dragone
                 </div>

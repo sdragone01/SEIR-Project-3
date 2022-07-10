@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Popup from '../../../components/Popup'
 import './Help.css'
-import HelpGrid from './AboutGrid'
+import HelpGrid from './HelpGrid'
 
 
 

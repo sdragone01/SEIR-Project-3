@@ -32,12 +32,12 @@ export default function LoginForm({ setUser }) {
 
   return (
 
-    <div className="container">
+    <div className="login-container">
       <div className="Form-Two-Img">
       </div>
 
-      <form className="Form" autoComplete="off" >
-        <div className="Head">
+      <form className="login-Form" autoComplete="off" >
+        <div className="login-Head">
 
           <h1 className="headtext">Welcome Back</h1>
           <p className="sub-text">Login to your account</p>

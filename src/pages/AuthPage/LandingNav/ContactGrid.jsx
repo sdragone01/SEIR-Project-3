@@ -20,7 +20,7 @@ export default function ContactGrid() {
 
                         </div>
                         <div className="contact-Content">
-                            <div className="Head">
+                            <div className="contact-Head">
                                 <br />
                                 <br />
                                 <br />
@@ -57,11 +57,11 @@ export default function ContactGrid() {
             ) : (
 
                 <div className="contact-container">
-                    <div className="About-Img">
+                    <div className="contact-Img">
 
                     </div>
                     <div className="contact-Content">
-                        <div className="Head">
+                        <div className="contact-Head">
                             <h1 className='contact-headder'>Contact Us</h1>
                             <p className="sub-head-contact">Submit a form and a team member will reach out as soon as possible</p>
 

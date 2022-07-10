@@ -45,12 +45,12 @@ export default class SignUpForm extends Component {
         const disable = this.state.password !== this.state.confirm;
         return (
 
-            <div className="container">
+            <div className="signup-container">
                 <div className="Form-One-Img">
                 </div>
 
-                <form className="Form" autoComplete="off" onSubmit={this.handleSubmit}>
-                    <div className="Head">
+                <form className="signup-Form" autoComplete="off" onSubmit={this.handleSubmit}>
+                    <div className="signup-Head">
 
                         <h1 className="headtext">Welcome to TG Games</h1>
                         <p className="sub-text">Register your account</p>
