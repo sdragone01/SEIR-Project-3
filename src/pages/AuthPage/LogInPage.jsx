@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Popup from '../../components/Popup'
 import LogInForm from '../../components/LogInForm'
+import "./LogInPage.css"
 
 
 
@@ -14,7 +15,7 @@ function LogInPage({ setUser }) {
     }
     return (
         <div>
-            <input type="button" value="Login"
+            <input className="log-in-button" type="button" value="Login"
                 onClick={togglePopup}
             />
             {isOpen && <Popup content={

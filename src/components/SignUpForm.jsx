@@ -1,6 +1,9 @@
 import { Component } from "react"
 import { signUp } from "../utilities/users-service.js"
 
+import './SignUpForm.css'
+import thunder from './thunder.svg'
+
 
 export default class SignUpForm extends Component {
     state = {
@@ -18,6 +21,9 @@ export default class SignUpForm extends Component {
             error: ''
         });
     };
+    refreshPage() {
+        window.location.reload();
+    }
 
     handleSubmit = async (evt) => {
         evt.preventDefault()
@@ -38,34 +44,41 @@ export default class SignUpForm extends Component {
     render() {
         const disable = this.state.password !== this.state.confirm;
         return (
-            <div className="board">
-                <div className="form-container">
-                    <form className="form" autoComplete="off" onSubmit={this.handleSubmit}>
-                        <div className="name">
-                            <label className="formLabel">Name</label>
-                            <hr className="line" />
-                            <input className="formInput" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
-                        </div>
-                        <div className="email">
-                            <label className="formLabel">Email</label>
-                            <hr className="line" />
-                            <input className="formInput" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
-                        </div>
-                        <div className="pass">
-                            <label className="formLabel">Password</label>
-                            <hr className="line" />
-                            <input className="formInput" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-                        </div>
-                        <div className="conf">
-                            <label className="formLabel">Confirm</label>
-                            <hr className="line" />
-                            <input className="formInput" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
-                        </div>
-                        <button className="formButt" type="submit" disabled={disable}>SIGN UP</button>
-                    </form>
+
+            <div className="container">
+                <div className="Img">
                 </div>
-                <p className="error-message">&nbsp;{this.state.error}</p>
+
+                <form className="Form" autoComplete="off" onSubmit={this.handleSubmit}>
+                    <div className="Head">
+
+                        <h1 className="headtext">Welcome to TG Games</h1>
+                        <p className="sub-text">Register your account</p>
+                    </div>
+
+                    <div className="name">
+                        <input className="form-input" placeholder="&#128100; | NAME" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+                    </div>
+
+                    <div className="email">
+                        <input className="form-input" placeholder="  &#64; | E-MAIL" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+                    </div>
+
+                    <div className="pass">
+                        <input className="form-input" placeholder="&#128274; | PASSWORD" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+                    </div>
+
+                    <div className="confirm">
+                        <input className="form-input" placeholder="&#128274; | CONFIRM PASSWORD" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
+                    </div>
+
+                    <div className="button">
+                        <button className="formButt" type="submit" disabled={disable}>SIGN UP</button>
+                    </div>
+
+                </form>
+
             </div>
-        );
+        )
     }
 }
