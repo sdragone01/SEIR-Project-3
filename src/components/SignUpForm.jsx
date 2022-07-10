@@ -46,7 +46,7 @@ export default class SignUpForm extends Component {
         return (
 
             <div className="container">
-                <div className="Img">
+                <div className="Form-One-Img">
                 </div>
 
                 <form className="Form" autoComplete="off" onSubmit={this.handleSubmit}>

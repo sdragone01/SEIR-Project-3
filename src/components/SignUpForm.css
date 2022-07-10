@@ -12,7 +12,7 @@
         "Img Form Form";
 }
 
-.Img {
+.Form-One-Img {
     grid-area: Img;
     background: url('./betterthunder.png');
     background-size: cover;

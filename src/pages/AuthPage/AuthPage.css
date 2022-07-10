@@ -26,6 +26,7 @@
     justify-content: space-between;
     width: 25%;
     margin-left: 45%;
+    z-index: 5;
 }
 
 .navItem {
@@ -54,6 +55,7 @@
     display: flex;
     margin-top: 10%;
     font-weight: 300;
+
 }
 
 .logInButt {
