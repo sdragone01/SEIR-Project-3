@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Logo from '../pages/AuthPage/logo.svg'
 import * as usersService from '../utilities/users-service'
 import './NavBar.css'
 import SearchBar from "./SearchBar"
@@ -16,7 +17,7 @@ export default function NavBar({ user, setUser, findGame }) {
             <nav className="NavBar">
 
 
-
+                <img className="logo-nav" src={Logo} alt="" />
                 <Link className="NavLink" to='/'>Home</Link>
 
                 <Link className="NavLink" to='/user'>Library</Link>
@@ -27,7 +28,7 @@ export default function NavBar({ user, setUser, findGame }) {
 
                 <Link className="NavLink" to="" onClick={handleLogOut}>Log Out</Link>
 
-                <SearchBar className='NavLink' findGame={findGame} />
+                {/* <SearchBar className='NavLink' findGame={findGame} /> */}
             </nav>
         </div>
     )
