@@ -6,10 +6,14 @@ import LogInButt from './LogInPage'
 import Logo from './logo.svg'
 import Tag from './titlebar.svg'
 
+
 import { Routes, Route } from "react-router-dom";
-import SignUpButt from './SignUpPage'
+
 import SignUpPage2 from './SignUpPage2'
 import LogInPage from './LogInPage'
+import About from '../AuthPage/LandingNav/About'
+import Contact from '../AuthPage/LandingNav/Contact'
+import Help from '../AuthPage/LandingNav/Help'
 
 
 
@@ -20,9 +24,10 @@ export default function AuthPage({ setUser }) {
             <div className='headder'>
                 <img className="logo" src={Logo} width="200px" />
                 <div className='nav'>
-                    <h1 className='navItem'>Home</h1>
-                    <h1 className='navItem'>About us</h1>
-                    <h1 className='navItem'>Contact</h1>
+
+                    <About />
+                    <Contact />
+                    <Help />
                 </div>
             </div>
 
@@ -39,6 +44,6 @@ export default function AuthPage({ setUser }) {
                 </div>
             </div>
 
-        </main>
+        </main >
     )
 }
