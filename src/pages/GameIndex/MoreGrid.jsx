@@ -5,7 +5,7 @@ import SearchBar from "../../components/SearchBar"
 export default function MoreGrid() {
     return (
         <div className="more-grid">
-            <div SearchBar>
+            <div className='SearchBar'>
                 <SearchBar />
             </div>
         </div>
