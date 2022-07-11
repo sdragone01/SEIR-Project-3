@@ -1,0 +1,97 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Img Content Content"
+        "Img Content Content"
+        "Img Content Content"
+        "Img Content Content"
+        "Img Content Content"
+        "Img Content Content";
+    margin-top: -9%;
+}
+
+.About-Img {
+    grid-area: Img;
+    background: url(./thunder2.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.about-Content {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Head Head Head"
+        "Body Body Body"
+        "Body Body Body"
+        "Body Body Body"
+        "Body Body Body"
+        "Foot Foot Foot";
+    grid-area: Content;
+    background-color: white;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    padding-left: 10%;
+
+}
+
+.about-head-line {
+    width: 70px;
+    margin-left: 0%;
+    background-color: black;
+    height: 3px;
+}
+
+
+
+.about-Head {
+    grid-area: Head;
+    color: black;
+
+
+}
+
+.about-Foot {
+    grid-area: Foot;
+
+}
+
+.Body {
+    grid-area: Body;
+    width: 80%;
+    font-size: larger;
+
+}
+
+.about-headder {
+
+    font-family: futura-pt, sans-serif;
+    font-size: 40px;
+
+    font-weight: 400;
+}
+
+.about-experience {
+
+    font-family: futura-pt, sans-serif;
+    font-size: 30px;
+
+    font-weight: 400;
+}
+
+.about-tech {
+
+    font-family: futura-pt, sans-serif;
+    font-size: 30px;
+
+    font-weight: 400;
+}

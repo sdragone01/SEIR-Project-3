@@ -1,9 +1,12 @@
 import './AddGameForm.css'
 import { Component } from "react"
+
 // import { addGame } from '../utilities/games-api'
 const axios = require('axios').default;
+const baseURL = 'api/games';
 
 export default class AddGameForm extends Component {
+
 
     state = {
         title: '',
@@ -21,6 +24,8 @@ export default class AddGameForm extends Component {
             error: ''
         })
     }
+
+
 
 
     onSubmit = (e) => {

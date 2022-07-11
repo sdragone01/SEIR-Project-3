@@ -1,0 +1,45 @@
+.fruit-ninja {
+    width: 80vh;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+
+    margin: 0;
+}
+
+.playgame {
+    display: flex;
+    justify-content: center;
+
+}
+
+.play-now {
+    height: 50px;
+    width: 270px;
+    font-size: 25px;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+}
+
+.play-now:hover {
+    cursor: pointer;
+    color: black;
+    height: 50px;
+    width: 270px;
+    font-size: 25px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+
+}

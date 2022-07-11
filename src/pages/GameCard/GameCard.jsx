@@ -8,9 +8,11 @@ const baseURL = 'api/games';
 export default function GameCard() {
     const [post, setPost] = React.useState(null);
 
+
     React.useEffect(() => {
         axios.get(baseURL).then((post) => {
             setPost(post)
+            console.log(post)
 
 
         });
@@ -22,19 +24,21 @@ export default function GameCard() {
         <div className="GameGrid">
             {post.data.map((game) => {
                 return (
-                    <Link to={`/games/${game._id}`} key={game._id}>
+                    <Link className="game-link" to={`/games/${game._id}`} key={game._id}>
 
-                        <div className="gameCard" key={game.title}>
-                            <div className="gameTag">
-                                <h2 id="title">{game.title}</h2>
+                        <div className="game-card-grid">
+                            <div className="game-card-container">
+                                <h1 id="game-title" className="game-title">{game.title}</h1>
+                                <img id="game-img" className="game-img" src={game.img} alt=""></img>
 
                             </div>
 
+
                         </div>
 
-                    </Link>
+                    </Link >
                 )
             })}
-        </div>
+        </div >
     )
 }

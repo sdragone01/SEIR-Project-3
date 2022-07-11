@@ -1,0 +1,18 @@
+.about-butt {
+
+    color: white;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-size: xx-large;
+    width: 100%;
+    margin-top: 5%;
+    background-color: transparent;
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.about-butt:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .5s;
+}

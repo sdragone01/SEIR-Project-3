@@ -1,0 +1,129 @@
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Img Content Content"
+        "Img Content Content"
+        "Img Content Content"
+        "Img Content Content"
+    ;
+    margin-top: -9%;
+}
+
+.contact-Img {
+    grid-area: Img;
+    background: url(./gitchythunder.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.contact-Content {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Head Head Head"
+        "Body Body Body"
+        "Body Body Body"
+        "Body Body Body"
+        "Body Body Body"
+        "Foot Foot Foot";
+    grid-area: Content;
+    background-color: white;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    padding-left: 10%;
+
+}
+
+.contact-Head {
+    grid-area: Head;
+    color: black;
+
+
+}
+
+.contact-Foot {
+    grid-area: Foot;
+    margin-top: -15%;
+    text-align: center;
+    margin-left: -12%;
+}
+
+.contact-Body {
+    grid-area: Body;
+    width: 80%;
+    font-size: larger;
+    font-family: futura-pt, sans-serif;
+    margin-top: -5%;
+
+}
+
+.contact-headder {
+
+    font-family: futura-pt, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.sub-head-contact {
+    font-family: futura-pt, sans-serif;
+    font-size: 20px;
+    width: 80%;
+    margin-top: -5%;
+    font-weight: 400;
+    color: grey;
+}
+
+
+
+.select {
+    font-family: futura-pt, sans-serif;
+    font-size: large;
+}
+
+.contact-input {
+    font-family: futura-pt, sans-serif;
+    font-size: large;
+}
+
+.contact-input-big {
+    font-family: futura-pt, sans-serif;
+    font-size: large;
+    width: 100%;
+    height: 20%;
+}
+
+.contact-submit {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-size: larger;
+    color: black;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+    margin-bottom: 10%;
+}
+
+.contact-submit:hover {
+    cursor: pointer;
+    color: white;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+
+}

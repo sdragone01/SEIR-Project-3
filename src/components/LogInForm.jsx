@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import * as usersService from '../utilities/users-service';
+import './LogInForm.css'
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -30,17 +31,43 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
-    <div>
-      <div className="form-container" onSubmit={handleSubmit}>
-        <form autoComplete="off" >
-          <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
-        </form>
+
+    <div className="login-container">
+      <div className="Form-Two-Img">
       </div>
-      <p className="error-message">&nbsp;{error}</p>
+
+      <form  onSubmit={handleSubmit}className="login-Form" autoComplete="off" >
+        <div className="login-Head">
+
+          <h1 className="headtext">Welcome Back</h1>
+          <p className="sub-text">Login to your account</p>
+        </div>
+
+        <div className="email">
+          <input className="form-input" placeholder="  &#64; | E-MAIL" type="text" name="email" value={credentials.email} onChange={handleChange} required />
+        </div>
+
+        <div className="pass">
+          <input className="form-input" placeholder="&#128274; | PASSWORD" type="password" name="password" value={credentials.password} onChange={handleChange} required />
+        </div>
+
+
+
+        <div className="button">
+          <button className="formButt" type="submit">LOG IN</button>
+        </div>
+
+      </form>
+
     </div>
+
+
+
+
+
+
+
+
+
   );
 }

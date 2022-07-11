@@ -28,7 +28,8 @@
     "react-select-search": "^3.0.10",
     "serve-favicon": "^2.5.0",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zlib": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

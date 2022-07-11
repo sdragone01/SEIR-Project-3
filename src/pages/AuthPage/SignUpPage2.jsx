@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Popup from '../../components/Popup'
 import SignUpForm from '../../components/SignUpForm'
+import './SignUpPage2.css'
 
 
 
@@ -14,7 +15,7 @@ function SignUpPage2({ setUser }) {
     }
     return (
         <div>
-            <input type="button" value="Signup"
+            <input className='sign-up-button' type="button" value="Signup"
                 onClick={togglePopup}
             />
             {isOpen && <Popup content={

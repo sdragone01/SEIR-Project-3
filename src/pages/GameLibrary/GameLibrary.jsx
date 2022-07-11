@@ -1,9 +1,11 @@
 import './GameLibrary.css'
+import GameCard from "../GameCard/GameCard"
 
-export default function GameLibraryPage() {
+export default function GameLibrary() {
     return (
-        <div className="GameLibraryPage">
-            
+        <div className="library-container">
+
+            <GameCard />
         </div>
     )
 }

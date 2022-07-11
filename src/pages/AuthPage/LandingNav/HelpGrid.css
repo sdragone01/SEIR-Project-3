@@ -1,0 +1,75 @@
+.help-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Img Content Content"
+        "Img Content Content"
+        "Img Content Content"
+    ;
+    margin-top: 25%;
+}
+
+.help-Img {
+    grid-area: Img;
+    background: url(./thunder2.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.panda {
+    width: auto;
+    border: none;
+    margin-top: -15%;
+}
+
+.help-Content {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Head Head Head"
+        "Body Body Body"
+
+        "Foot Foot Foot";
+    grid-area: Content;
+    background-color: white;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    padding-left: 10%;
+
+}
+
+
+
+.help-Head {
+    grid-area: Head;
+    color: black;
+
+
+}
+
+.help-Foot {
+    grid-area: Foot;
+
+}
+
+.Body {
+    grid-area: Body;
+    width: 80%;
+    font-size: larger;
+
+}
+
+.help-headder {
+
+    font-family: futura-pt, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
