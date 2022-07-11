@@ -36,7 +36,7 @@ export default function LoginForm({ setUser }) {
       <div className="Form-Two-Img">
       </div>
 
-      <form className="login-Form" autoComplete="off" >
+      <form  onSubmit={handleSubmit}className="login-Form" autoComplete="off" >
         <div className="login-Head">
 
           <h1 className="headtext">Welcome Back</h1>
