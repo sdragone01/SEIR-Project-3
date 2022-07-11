@@ -20,7 +20,7 @@ export default function NavBar({ user, setUser, findGame }) {
                 <img className="logo-nav" src={Logo} alt="" />
                 <Link className="NavLink" to='/'>Home</Link>
 
-                <Link className="NavLink" to='/user'>Library</Link>
+                <Link className="NavLink" to='/library'>Library</Link>
 
                 <Link className="NavLink" to='/games'>Games</Link>
 

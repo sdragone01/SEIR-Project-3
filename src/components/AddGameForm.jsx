@@ -1,7 +1,12 @@
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import React from "react";
+import { getUser } from "../utilities/users-service";
 import './AddGameForm.css'
 import { Component } from "react"
 import { addGame } from '../utilities/games-api'
 const axios = require('axios').default;
+
 
 export default class AddGameForm extends Component {
 
@@ -22,18 +27,11 @@ export default class AddGameForm extends Component {
         })
     }
 
-    // handleSubmit = async (evt) => {
-    //     evt.preventDefault()
-    //     try {
-    //         const formData = { ...this.state }
-    //         delete formData.error
-    //         await addGame(formData)
-    //     } catch {
-    //         this.setState({ error: 'Adding Game Failed - Try Again' })
-    //     }
-    // }
+
+
 
     onSubmit = (e) => {
+
         e.preventDefault()
         const { title, genre, description, link, img, price, error } = this.state
 

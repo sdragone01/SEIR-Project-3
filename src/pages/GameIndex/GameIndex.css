@@ -3,3 +3,15 @@
     margin-left: 5%;
     color: white;
 }
+
+.games-from-users {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.index-line {
+    width: 10%;
+    text-align: left;
+    margin-left: -0%;
+}

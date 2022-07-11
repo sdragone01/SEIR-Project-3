@@ -10,6 +10,7 @@ import GameList from "../../components/GameList";
 import UserPage from "../UserPage";
 import GameIndexPage from "../GameIndex/GameIndex";
 import GameDetails from "../GameDetails/GameDetails"
+import GameLibrary from "../GameLibrary/GameLibrary";
 import { games } from "../../seed"
 import AddGameForm from "../../components/AddGameForm";
 import Home from "../Home/Home"
@@ -52,6 +53,7 @@ export default function App() {
 
   return (
     <main className="App">
+      <img className="background" src="../../../Assets/background\ thing\ app\ copy.png" alt="" />
       {user ?
         <>
           <NavBar className='searchbar' user={user} setUser={setUser} findGame={findGame} />
@@ -59,11 +61,13 @@ export default function App() {
           <Routes>
             <Route classNam="home-show" path="/" element={<Home />} />
             <Route path="games/:gameId" element={<GameDetails />} />
-            <Route path="/user" element={<UserPage />} />
+
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
             <Route path='/games' element={<GameIndexPage />} />
             <Route path='/new' element={<AddGameForm />} />
+            <Route path='/library' element={<GameLibrary />} />
+
           </Routes>
 
 
