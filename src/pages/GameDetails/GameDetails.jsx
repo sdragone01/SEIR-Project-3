@@ -21,9 +21,13 @@ export default function GameDetailPage() {
     }, []);
 
     async function removeGame() {
+        if (user.email === game.email){
         axios.delete(`${baseURL}/${gameId}`).then((deletedGame) => {
             console.log(deletedGame)
         })
+        } else (
+            alert("You are not the owner of this game")
+        )
     }
 
     async function editGame() {
@@ -35,7 +39,13 @@ export default function GameDetailPage() {
 
     function editForm() {
         console.log({ user })
-        setEdit(true)
+        console.log({ game })
+        if (user.email === game.email) {
+            setEdit(true)
+        } else (
+            alert("You are not the owner of this game")
+        )
+
     }
 
     function handleSubmit(e) {

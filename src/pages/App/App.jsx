@@ -16,6 +16,7 @@ import AddGameForm from "../../components/AddGameForm";
 import Home from "../Home/Home"
 
 
+
 const APIKEY = '3498f188321247eb96dee04d1c8e0928'
 const url = `https://api.rawg.io/api/games?&key=${APIKEY}`
 
@@ -56,7 +57,7 @@ export default function App() {
       <img className="background" src="../../../Assets/background\ thing\ app\ copy.png" alt="" />
       {user ?
         <>
-          <NavBar className='searchbar' user={user} setUser={setUser} findGame={findGame} />
+          <NavBar className='searchbar' user={user} setUser={setUser} />
           <br />
           <Routes>
             <Route classNam="home-show" path="/" element={<Home />} />
@@ -72,7 +73,7 @@ export default function App() {
 
 
 
-          <GameList gamesArr={gamesArr} />
+
         </>
         :
         <AuthPage setUser={setUser} />

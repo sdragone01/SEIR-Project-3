@@ -1,21 +1,78 @@
-.AddGame {
-    color: white;
-    display: flex;
-    padding: auto;
-    margin-top: 10%;
-    font-family: futura-pt,sans-serif;
-    font-style: normal;
+.game-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Preview game-form"
+        "Preview game-form"
+        "Preview game-form"
+        "Preview game-form"
+        "Preview game-form"
+        "Preview game-form"
+        "Preview game-form"
+        "Preview game-form"
+        "Preview game-form";
 }
 
-.GameInfo {
-    font-family: futura-pt,sans-serif;
-    font-style: normal;
-    color: white;
-    margin-top: 15%;
-    display: flex;
-    position: relative;
-    align-items: center;
-    height: 5%;    
-    flex-direction: column;
-    row-gap: 20px;
+.Preview {
+    grid-area: Preview;
+}
+
+.game-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "game-form-headder"
+        "game-form-title"
+        "game-form-genre"
+        "game-form-desc"
+        "game-form-link"
+        "game-form-img"
+        "game-form-prive"
+        "game-form-email"
+        "game-form-foot";
+    grid-area: game-form;
+}
+
+.game-form-headder {
+    grid-area: game-form-headder;
+}
+
+.game-form-title {
+    grid-area: game-form-title;
+}
+
+.game-form-genre {
+    grid-area: game-form-genre;
+}
+
+.game-form-desc {
+    grid-area: game-form-desc;
+}
+
+.game-form-link {
+    grid-area: game-form-link;
+}
+
+.game-form-img {
+    grid-area: game-form-img;
+}
+
+.game-form-prive {
+    grid-area: game-form-prive;
+}
+
+.game-form-email {
+    grid-area: game-form-email;
+}
+
+.game-form-foot {
+    grid-area: game-form-foot;
 }
