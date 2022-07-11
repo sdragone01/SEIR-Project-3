@@ -36,8 +36,9 @@ export default function MoreGrid() {
         <div className="more-grid">
             <div className='SearchBar'>
                 <SearchBar findGame={findGame} />
-                <GameList gamesArr={gamesArr} />
-
+                <div className='game-list'>
+                    <GameList gamesArr={gamesArr} />
+                </div>
             </div>
         </div>
     )

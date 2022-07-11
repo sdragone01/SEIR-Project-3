@@ -4,22 +4,34 @@
     height: 125px;
     object-fit: cover;
     border-radius: 80px;
-    margin-left: 5%;
-    margin-top: 2%;
+
+
+
+
+
 
 
 }
 
-.api-title {
+.main-api-grid:hover>#api-img {
+    opacity: 0.5;
+    transition: 2s;
+}
 
-    position: absolute;
+.main-api-grid:hover>#api-title {
+    opacity: 1;
+    transition: 2s;
+}
+
+.api-title {
     width: 125px;
     text-decoration: none;
     color: white;
     font-weight: 400;
-    align-content: center;
+    position: absolute;
+    margin-top: -10%;
     transition: all 1s ease-in-out;
-    text-align: center;
+    font-family: futura-pt, sans-serif;
     opacity: 0;
     z-index: 3;
 }
