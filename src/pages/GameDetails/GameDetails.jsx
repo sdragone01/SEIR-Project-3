@@ -5,6 +5,7 @@ import React from "react";
 import "./GameDetails.css";
 import { useState, useEffect } from "react";
 import { getUser } from "../../utilities/users-service";
+import GameDetailPlay from "./GameDetailPlay"
 
 const baseURL = '/api/games'
 
@@ -21,10 +22,10 @@ export default function GameDetailPage() {
     }, []);
 
     async function removeGame() {
-        if (user.email === game.email){
-        axios.delete(`${baseURL}/${gameId}`).then((deletedGame) => {
-            console.log(deletedGame)
-        })
+        if (user.email === game.email) {
+            axios.delete(`${baseURL}/${gameId}`).then((deletedGame) => {
+                console.log(deletedGame)
+            })
         } else (
             alert("You are not the owner of this game")
         )
@@ -33,6 +34,7 @@ export default function GameDetailPage() {
     async function editGame() {
         axios.put(`${baseURL}/${gameId}/edit`, game).then((editGame) => {
             console.log(editGame)
+
         })
     }
     // let game = games.find((gam) => gam.title === gameName);
@@ -42,6 +44,7 @@ export default function GameDetailPage() {
         console.log({ game })
         if (user.email === game.email) {
             setEdit(true)
+
         } else (
             alert("You are not the owner of this game")
         )
@@ -86,24 +89,30 @@ export default function GameDetailPage() {
                 <>
                     {game ?
 
-                        <>
-                            < h1 > {game.title}</h1 >
-                            < h1 > {game.image}</h1 >
-                            < h1 > {game.link}</h1 >
-                            <hr />
-                            < h1 > {game.description}</h1 >
-                            < h1 > {game.genre}</h1 >
-                            < h1 > {game.price}</h1 >
+                        <div className="game-detail-main">
+                            < h1 className="det-title"> {game.title}</h1 >
 
-                            <button onClick={removeGame}>Delete</button>
-                            <button onClick={editForm}>Edit Game Info</button>
-                        </>
+                            <hr className="det-line" />
+                            <div className="det-right">
+                                <img className="det-img" src={game.img} alt="" />
+                                <div className="det-info">
+                                    < h1 className="det-price"> ${game.price}</h1 >
+                                    < p className="det-genre"> <b>Genre: </b>{game.genre}</p >
+                                    < p className="det-desc"> <b>Description:</b> {game.description}</p >
+                                    <GameDetailPlay />
+                                </div>
+
+
+                            </div>
+                            <button className="det-but" onClick={removeGame}>Delete</button>
+                            <button className="det-but" onClick={editForm}>Edit Game Info</button>
+                        </div>
                         :
-                        <h1>game not found</h1>
+                        <></>
                     }
                 </>
             }
-        </div>
+        </div >
     );
 }
 

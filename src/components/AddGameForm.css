@@ -16,17 +16,53 @@
         "Preview game-form"
         "Preview game-form"
         "Preview game-form";
+    margin-top: 7%;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
 }
 
 .Preview {
     grid-area: Preview;
+    text-align: center;
+    color: white;
+    font-family: futura-pt, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+
 }
+
+.add-preview {
+    font-weight: 400;
+}
+
+.add-line {
+    width: 50%;
+    margin-top: -3%;
+}
+
+.add-img-prev {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+
+
+
+
+}
+
+.prev-genre {
+    margin-top: -5%;
+    font-size: 25px;
+    padding-bottom: 2%;
+    color: rgb(169, 169, 169);
+}
+
 
 .game-form {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
+    row-gap: 20px;
     grid-auto-flow: row;
     grid-template-areas:
         "game-form-headder"
@@ -39,6 +75,8 @@
         "game-form-email"
         "game-form-foot";
     grid-area: game-form;
+    height: 50%;
+
 }
 
 .game-form-headder {
@@ -75,4 +113,74 @@
 
 .game-form-foot {
     grid-area: game-form-foot;
+}
+
+.add-input {
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding-left: 2%;
+
+
+}
+
+.add-input-link {
+    width: 40%;
+    height: 3%;
+    margin-top: -20%;
+
+
+}
+
+
+
+.add-desc-input {
+    width: 40%;
+    height: 40%;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+
+}
+
+.add-game-head {
+    color: white;
+    font-weight: 400;
+
+}
+
+.prev-head {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.add-game-but {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-size: larger;
+    color: white;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+
+.add-game-but:hover {
+    cursor: pointer;
+    color: black;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+
 }

@@ -21,3 +21,88 @@ iframe {
     width: 100%;
     height: 100%;
 }
+
+.game-detail-main {
+    text-align: center;
+    margin-top: 8%;
+    color: white;
+
+}
+
+.det-title {
+    font-family: futura-pt, sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+
+}
+
+.det-genre {
+    font-family: futura-pt, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(192, 192, 192);
+
+}
+
+.det-desc {
+    font-family: futura-pt, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 200px;
+
+
+}
+
+.det-price {
+    font-family: futura-pt, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+
+
+
+}
+
+.det-line {
+    width: 40%;
+}
+
+.det-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.det-img {
+    width: 400px;
+    margin-right: 10%;
+}
+
+.det-but {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-size: larger;
+    color: white;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.det-but:hover {
+    cursor: pointer;
+    color: black;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+
+}

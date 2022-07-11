@@ -5,6 +5,7 @@ import { getUser } from "../utilities/users-service";
 import './AddGameForm.css'
 import { Component } from "react"
 import { addGame } from '../utilities/games-api'
+import { useHistory } from "react-router-dom"
 const axios = require('axios').default;
 
 
@@ -17,7 +18,7 @@ export default class AddGameForm extends Component {
         description: '',
         link: '',
         img: '',
-        price: 0,
+        price: '',
         error: '',
 
     }
@@ -26,6 +27,7 @@ export default class AddGameForm extends Component {
         this.setState({
             [evt.target.name]: evt.target.value,
             error: ''
+
         })
     }
 
@@ -39,6 +41,7 @@ export default class AddGameForm extends Component {
 
         axios.post('api/games', { email, title, genre, description, link, img, price, error })
             .then((result) => {
+
                 console.log(result)
             })
     }
@@ -47,32 +50,47 @@ export default class AddGameForm extends Component {
         return (
 
             <form className="game-form-container">
-                <div className="Preview"></div>
+                <div className="Preview">
+                    <h1 className="prev-head">
+                        Listing Preview
+                    </h1>
+                    <h1 className="add-preview">{this.state.title}</h1>
+                    <p className="prev-genre">{this.state.genre} | <b>${this.state.price}</b></p>
+                    <hr className="add-line" />
+                    <div className="left-top">
+                        <img className="add-img-prev" src={this.state.img} alt="" />
+
+                    </div>
+
+                </div>
                 <div className="game-form">
-                    <div className="game-form-headder"></div>
+                    <div className="game-form-headder">
+                        <h1 className="add-game-head">Add Game</h1>
+                    </div>
                     <div className="game-form-title">
-                        <input type="text" onChange={this.handleChange} value={this.state.title} name='title' />
+                        <input className="add-input" placeholder="NAME" type="text" onChange={this.handleChange} value={this.state.title} name='title' />
                     </div>
                     <div className="game-form-genre">
-                        <input type="text" onChange={this.handleChange} value={this.state.genre} name='genre' />
+                        <input className="add-input" placeholder="GENRE" type="text" onChange={this.handleChange} value={this.state.genre} name='genre' />
                     </div>
                     <div className="game-form-desc">
-                        <input type="text" onChange={this.handleChange} value={this.state.description} name='description' />
+                        <input className="add-input" placeholder="DESCRIPTION" type="text" onChange={this.handleChange} value={this.state.description} cols='30' rows='10' name='description' />
+
                     </div>
                     <div className="game-form-link">
-                        <input type="text" onChange={this.handleChange} value={this.state.link} name='link' />
+                        <input className="add-input" placeholder="GAME LINK" type="text" onChange={this.handleChange} value={this.state.link} name='link' />
                     </div>
                     <div className="game-form-img">
-                        <input type="text" onChange={this.handleChange} value={this.state.img} name='img' />
+                        <input className="add-input" placeholder="GAME IMG (300px x 300px)" type="text" onChange={this.handleChange} value={this.state.img} name='img' />
                     </div>
                     <div className="game-form-price">
-                        <input type="number" onChange={this.handleChange} value={this.state.price} name='price' />
+                        <input className="add-input" placeholder="PRICE" type="number" onChange={this.handleChange} value={this.state.price} name='price' />
                     </div>
                     <div className="game-form-email">
-                        <input type="text" onChange={this.handleChange} value={this.state.email} name='email' />
+                        <input className="add-input" placeholder="CONFIRM USER EMAIL" type="text" onChange={this.handleChange} value={this.state.email} name='email' />
                     </div>
                     <div className="game-form-foot">
-                        <button onClick={this.onSubmit} type='submit'
+                        <button className="add-game-but" onClick={this.onSubmit} type='submit'
                         >SUBMIT</button>
                     </div>
                 </div>
