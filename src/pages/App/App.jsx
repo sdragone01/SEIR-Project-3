@@ -65,7 +65,7 @@ export default function App() {
 
             <Route path='/orders/new' element={<GameStorePage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
-            <Route path='/games' element={<GameIndexPage findGame={findGame} />} />
+            <Route path='/games' element={<GameIndexPage />} />
             <Route path='/new' element={<AddGameForm />} />
             <Route path='/library' element={<GameLibrary />} />
 
@@ -73,7 +73,7 @@ export default function App() {
 
 
 
-          <GameList gamesArr={gamesArr} />
+
         </>
         :
         <AuthPage setUser={setUser} />
