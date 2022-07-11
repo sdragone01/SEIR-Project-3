@@ -19,6 +19,8 @@ export default function UserGameCard() {
         });
     }, []);
 
+    if (!post) return null;
+
     const filtered = post.data.filter(email => {
         return email.email === user.email
 
