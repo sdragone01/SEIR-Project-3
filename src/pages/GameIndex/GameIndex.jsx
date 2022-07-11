@@ -1,5 +1,7 @@
 import GameCard from "../GameCard/GameCard"
 import './GameIndex.css'
+import MoreFromApi from './MoreFromApi'
+import ApiPreview from './ApiPreview'
 
 export default function GameIndexPage() {
 
@@ -11,10 +13,17 @@ export default function GameIndexPage() {
                 </h1>
                 <hr className="index-line" />
                 <GameCard />
-                <GameCard />
+
             </div>
             <div className="api-search">
+                <h1 className="games-from-api">
+                    Upcoming Releases
+                </h1>
+                <hr className="index-line" />
+                <GameCard />
 
+
+                <div className="more-from-but">< MoreFromApi /></div>
             </div>
         </div>
     )

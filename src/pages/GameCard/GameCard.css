@@ -23,7 +23,7 @@
 }
 
 .GameGrid {
-    margin-top: 5%;
+    margin-top: 0%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

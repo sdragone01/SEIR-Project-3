@@ -2,6 +2,14 @@
     margin-top: 10%;
     margin-left: 5%;
     color: white;
+
+
+}
+
+.api-search {
+
+    margin-left: 5%;
+    color: white;
 }
 
 .games-from-users {
@@ -10,8 +18,22 @@
     font-weight: 400;
 }
 
+.games-from-api {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+
+
+}
+
 .index-line {
     width: 10%;
     text-align: left;
     margin-left: -0%;
+}
+
+.more-from-but {
+    display: flex;
+    justify-content: left;
 }
