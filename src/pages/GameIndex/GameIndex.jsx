@@ -3,7 +3,7 @@ import './GameIndex.css'
 import MoreFromApi from './MoreFromApi'
 import ApiPreview from './ApiPreview'
 
-export default function GameIndexPage() {
+export default function GameIndexPage({ findGame }) {
 
     return (
         <div className="game-index">
@@ -23,7 +23,7 @@ export default function GameIndexPage() {
                 <GameCard />
 
 
-                <div className="more-from-but">< MoreFromApi /></div>
+                <div className="more-from-but">< MoreFromApi findGame={findGame} /></div>
             </div>
         </div>
     )

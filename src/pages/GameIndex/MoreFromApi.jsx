@@ -5,7 +5,7 @@ import MoreGrid from './MoreGrid'
 
 
 
-function MoreFromApi() {
+function MoreFromApi({ findGame }) {
 
     const [isOpen, setIsOpen] = useState(false)
     const togglePopup = () => {
@@ -20,7 +20,7 @@ function MoreFromApi() {
             />
             {isOpen && <Popup content={
                 <>
-                    <MoreGrid />
+                    <MoreGrid findGame={findGame} />
                 </>
             }
                 handleClose={togglePopup}
