@@ -2,6 +2,7 @@ import GameCard from "../GameCard/GameCard"
 import './GameIndex.css'
 import MoreFromApi from './MoreFromApi'
 import ApiPreview from './ApiPreview'
+import SeedCard from '../GameCard/SeedCard'
 
 export default function GameIndexPage() {
 
@@ -20,7 +21,7 @@ export default function GameIndexPage() {
                     Upcoming Releases
                 </h1>
                 <hr className="index-line" />
-                <GameCard />
+                <SeedCard />
 
 
                 <div className="more-from-but">< MoreFromApi /></div>
