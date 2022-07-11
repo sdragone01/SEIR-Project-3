@@ -33,7 +33,11 @@ const gameSchema = new Schema({
         type: Number,
         required: true
     },
-    username: String,
+    email:
+    {
+    type: String,
+    required: true
+    }
 }, {
     timestamps: true,
 

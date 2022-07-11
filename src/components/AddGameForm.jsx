@@ -11,13 +11,15 @@ const axios = require('axios').default;
 export default class AddGameForm extends Component {
 
     state = {
+        email: '',
         title: '',
         genre: '',
         description: '',
         link: '',
         img: '',
         price: 0,
-        error: ''
+        error: '',
+        
     }
 
     handleChange = (evt) => {
@@ -33,9 +35,9 @@ export default class AddGameForm extends Component {
     onSubmit = (e) => {
 
         e.preventDefault()
-        const { title, genre, description, link, img, price, error } = this.state
+        const { email, title, genre, description, link, img, price, error} = this.state
 
-        axios.post('api/games', { title, genre, description, link, img, price, error })
+        axios.post('api/games', { email, title, genre, description, link, img, price, error})
             .then((result) => {
                 console.log(result)
             })
@@ -59,6 +61,8 @@ export default class AddGameForm extends Component {
                     <input type="text" onChange={this.handleChange} value={this.state.img} name='img' />
                     Price
                     <input type="number" onChange={this.handleChange} value={this.state.price} name='price' />
+                    Confirm Email
+                    <input type="text" onChange={this.handleChange} value={this.state.email} name='email' />
                     <button onClick={this.onSubmit} type='submit'
                     >SUBMIT</button>
                 </form>

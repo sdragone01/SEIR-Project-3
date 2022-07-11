@@ -35,7 +35,10 @@ export default function GameDetailPage() {
 
     function editForm() {
         console.log({ user })
-        setEdit(true)
+        console.log({game})
+        if (user.email === game.user){
+            setEdit(true)}
+        
     }
 
     function handleSubmit(e) {
@@ -51,7 +54,7 @@ export default function GameDetailPage() {
 
     return (
         <div>
-            {edit ?
+            {edit?
                 <>
                     <h1>Hello Edit</h1>
                     <form className='GameInfo' onSubmit={handleSubmit}>
