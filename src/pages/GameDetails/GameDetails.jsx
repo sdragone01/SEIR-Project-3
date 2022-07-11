@@ -38,7 +38,9 @@ export default function GameDetailPage() {
         console.log({ game })
         if (user.email === game.email) {
             setEdit(true)
-        }
+        } else (
+            alert("You are not the owner of this game")
+        )
 
     }
 
